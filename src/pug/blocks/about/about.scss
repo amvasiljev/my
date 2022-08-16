@@ -18,22 +18,26 @@
     }
 
     &__name {
-        font-size: 76.5px;
-        font-weight: 600;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.05;
-        letter-spacing: normal;
-        text-align: left;
-        color: #2c323d;
 
-        @media #{$m_768} {
-            font-size: 48px;
+        h1{
+            font-size: 76.5px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.05;
+            letter-spacing: normal;
+            text-align: left;
+            color: #2c323d;
+    
+            @media #{$m_768} {
+                font-size: 48px;
+            }
+    
+            @media #{$m_320} {
+                font-size: 22px;
+            }
         }
-
-        @media #{$m_320} {
-            font-size: 22px;
-        }
+       
     }
 
     &__position {
