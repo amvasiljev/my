@@ -1,6 +1,21 @@
 .about {
     padding: 126px 92px 130px 78px;
 
+    @media #{$m_1200} {
+        padding: 120px 50px;
+    }
+
+    @media #{$m_1024} {
+        padding: 120px 50px;
+    }
+
+    @media #{$m_768} {
+        padding: 100px 30px;
+    }
+
+    @media #{$m_320} {
+        padding: 50px 20px;
+    }
 
     &__name {
         font-size: 76.5px;
@@ -11,6 +26,14 @@
         letter-spacing: normal;
         text-align: left;
         color: #2c323d;
+
+        @media #{$m_768} {
+            font-size: 48px;
+        }
+
+        @media #{$m_320} {
+            font-size: 22px;
+        }
     }
 
     &__position {
@@ -22,10 +45,18 @@
         letter-spacing: 3.45px;
         text-align: left;
         color: #363636;
+
+        @media #{$m_320} {
+            font-size: 18px;
+        }
     }
 
     &__info {
         padding: 96px 0 0 0;
+
+        @media #{$m_320} {
+            padding: 20px 0 0 0;
+        }
     }
 
     &__title {
@@ -42,20 +73,38 @@
         padding: 0 0 30px 0;
         margin-bottom: 30px;
 
-        &:before{
-            content:'';
+        @media #{$m_320} {
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding: 0 0 20px 0;
+        }
+
+
+
+        &:before {
+            content: '';
             display: block;
             width: 60px;
             height: 4px;
-            background-color:  #2c323d;
+            background-color: #2c323d;
             position: absolute;
             bottom: 0;
             left: 0;
+
+            @media #{$m_320} {
+                height: 2px;
+            }
         }
     }
 
     &__text {
-        p,a,span,li,ul,ol{
+
+        p,
+        a,
+        span,
+        li,
+        ul,
+        ol {
             font-size: 19px;
             font-weight: normal;
             font-stretch: normal;
@@ -64,6 +113,51 @@
             letter-spacing: normal;
             text-align: left;
             color: #555;
+            margin-bottom: 10px;
+
+            @media #{$m_320} {
+                font-size: 16px;
+                margin-bottom: 5px;
+                line-height: 1.7;
+            }
+        }
+
+        ul {
+            padding: 10px 0 0 20px;
+        }
+
+        li {
+            list-style-type: disc;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    &__tags {
+        display: flex;
+        flex-flow: wrap;
+        gap: 10px
+    }
+
+    &__tag {
+        background-color: #d7d7d7;
+        font-size: 16px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        @media #{$m_320} {
+            font-size: 14px;
         }
     }
 }

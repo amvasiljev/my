@@ -11,8 +11,12 @@
         height: 100%;
 
         &_first {
-            display: grid;
-           display: flex;
+
+            display: flex;
+
+            @media #{$m_320} {
+                flex-direction: column-reverse;
+            }
         }
     }
 
@@ -22,12 +26,15 @@
         &_left {
             display: flex;
             justify-content: flex-end;
-           
+
             height: 100%;
             width: 30%;
             position: sticky;
             top: 0;
-            
+            @media #{$m_320} {
+                width: 100%;
+                justify-content: flex-start;
+            }
         }
 
         &_right {
@@ -35,6 +42,9 @@
             justify-content: flex-start;
             background-color: #fff;
             width: 70%;
+            @media #{$m_320} {
+                width: 100%;
+            }
         }
     }
 }
