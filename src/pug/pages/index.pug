@@ -5,4 +5,11 @@ block variables
     -var pageClass = ''
     -var img = '/assets/themes/default/img/'
 block content
-    +test()
+    .section.section_first
+        .section__inner.section__inner_first 
+            .section__box.section__box_left
+                +contact()
+            .section__box.section__box_right
+                +about()
+            
+            
