@@ -134,6 +134,10 @@
             list-style-type: disc;
         }
 
+        a{
+            word-break: break-all;
+        }
+
         a:hover {
             text-decoration: underline;
         }
